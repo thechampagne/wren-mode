@@ -196,7 +196,9 @@
 (define-derived-mode wren-mode prog-mode "Wren"
   "A major mode for the Wren programming language."
   :syntax-table wren-mode-syntax-table
-  (setq-local font-lock-defaults '(wren-font-lock-keywords)))
+  (setq-local font-lock-defaults '(wren-font-lock-keywords))
+  (setq-local comment-start "// ")
+  (setq-local comment-end ""))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.wren\\'" . wren-mode))
